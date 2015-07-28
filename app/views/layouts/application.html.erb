@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XyInc</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= csrf_meta_tags %>
+  <style>
+      a {
+          text-decoration: none!important;
+          color: #000000!important;
+      }
+
+      a:hover {
+          text-decoration: none!important;
+          color: #000000!important;
+      }
+      a:visited{
+          text-decoration: none!important;
+          color: #000000!important;
+      }
+  </style>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%= form_tag listar_pontos_proximos_pois_path, method: :post do %>
+
+    <div class="field">
+      <label>Coordenada X</label><br>
+      <%= number_field_tag "x", min: 0 %>
+    </div>
+
+    <div class="field">
+      <label>Coordenada Y</label><br>
+      <%= number_field_tag "y", min: 0 %>
+    </div>
+
+    <div class="field">
+      <label>Distância Máxima entre os pontos</label><br>
+      <%= number_field_tag "distancia_max", min: 0 %>
+    </div>
+
+    <%= submit_tag "Procurar pontos proximos", :nome => nil %>
+<% end %>

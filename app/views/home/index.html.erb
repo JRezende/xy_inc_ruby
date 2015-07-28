@@ -1,0 +1,24 @@
+<h2> XY Inc.</h2>
+
+<h2> Localizador de Pontos de Interesse </h2>
+
+<div>
+
+  <button>
+    <a href="<%= new_poi_path %>" title='Cadastrar'>
+      <h2>Cadastrar um Ponto de Interesse</h2>
+    </a>
+  </button>
+  <% if !@pois.blank? %>
+      <button>
+        <a href="<%= pois_path %>" title='Listar'>
+          <h2>Listar os Pontos de Interesse</h2>
+        </a>
+      </button>
+      <button>
+        <a href="<%= procurar_pontos_proximos_pois_path %>" title='Procurar'>
+          <h2>Buscar Pontos de Interesse em uma distancia maxima</h2>
+        </a>
+      </button>
+  <% end %>
+</div>

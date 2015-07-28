@@ -1,0 +1,38 @@
+<h1>Lista de pontos de interesse</h1>
+
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>X</th>
+    <th>Y</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @pois.each do |poi| %>
+      <tr>
+        <td><%= poi.nome %></td>
+        <td><%= poi.x %></td>
+        <td><%= poi.y %></td>
+        <td><button>
+          <%= link_to 'Editar', edit_poi_path(poi) %>
+        </button></td>
+
+        <td><%=button_to "Delete",poi_path(poi.id), :method => :delete, :class => "delete", :confirm => "Are you sure ?"%></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
+<button>
+  <%= link_to 'Novo ponto de interesse', new_poi_path %>
+</button>
+<button>
+  <%= link_to 'Procurar pontos por proximidade', procurar_pontos_proximos_pois_path %>
+</button>
+<button>
+  <%= link_to 'Pagina inicial', root_path %>
+</button>
